@@ -11,3 +11,4 @@ Thumbs.db
 .buildpath
 .settings/
 app/config/database.php
+/app/logs/
