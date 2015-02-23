@@ -10,3 +10,4 @@ Thumbs.db
 .project
 .buildpath
 .settings/
+app/config/database.php
