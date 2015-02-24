@@ -45,8 +45,8 @@
 	<div class="container tabs-container">
 
 		<ul class="nav nav-tabs">
-		  <li role="presentation" class="active"><a href="#">Главная</a></li>
-		  <li role="presentation"><a href="#">Товары</a></li>
+		  <li role="presentation" class="active"><a href="/">Главная</a></li>
+		  <li role="presentation"><a href="goods/list">Товары</a></li>
 		  <li role="presentation"><a href="#">Пользователи</a></li>
 		</ul>
 

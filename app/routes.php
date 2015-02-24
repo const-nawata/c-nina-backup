@@ -20,3 +20,5 @@ Route::get('/', [
 	'as' => 'home',
 	'uses' => 'IndexController@getIndex'
 ]);
+
+Route::controller('goods', 'GoodsController');
