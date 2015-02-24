@@ -5,6 +5,5 @@
 @stop
 
 @section('content')
-
-
+@include('goods/listcontent')
 @stop

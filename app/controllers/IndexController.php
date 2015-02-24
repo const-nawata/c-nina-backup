@@ -16,4 +16,11 @@ class IndexController extends BaseController{
 );
 
     }
+
+
+    public  function getIndexcontent(){
+    	return View::make('indexcontent');
+    }
+
+
 }//	Class end

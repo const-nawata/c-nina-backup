@@ -44,10 +44,10 @@
 <nav class="navbar navbar-default navbar-fixed-left">
 	<div class="container tabs-container">
 
-		<ul class="nav nav-tabs">
-		  <li role="presentation" class="active"><a href="/">Главная</a></li>
-		  <li role="presentation"><a href="goods/list">Товары</a></li>
-		  <li role="presentation"><a href="#">Пользователи</a></li>
+		<ul id="mainTabs" class="nav nav-tabs">
+		  <li role="presentation" class="active"><a id="home" href="" role="tab">Главная</a></li>
+		  <li role="presentation"><a id="goods_list" href="" role="tab">Товары</a></li>
+		  <li role="presentation"><a id="users_list" href="" role="tab">Пользователи</a></li>
 		</ul>
 
 	</div>
@@ -55,97 +55,66 @@
 
 
 
-
-
-
-
-
-
-<?php /* ?>
-
-
-
-				<ul class="nav navbar-nav">
-					<li class="active">
-						<a href="#">Home</a>
-					</li>
-
-					<li>
-						<a href="#">Link</a>
-					</li>
-
-					<li>
-						<a href="#">Link</a>
-					</li>
-				</ul>
-
-
-
-
-		<div class="navbar-header">
-
-
-<div class="header-page-line">
-
+<div id="mainn_contt">
+@yield('content')
 </div>
 
+<script>
 
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header"></div>
-
-                <div class="navbar-collapse collapse">
-
-
-
-		@if (!Auth::check())
-				    <form class="navbar-form navbar-right" role="form" action="{{ action('UsersController@postLogin') }}" method="post">
-				        <a href="/users/login" class="btn btn-success">Залогиниться</a>
-				        <a href="/users/register" class="btn btn-success">Регистрация</a>
-				    </form>
-		@else
-
-					<div class="navbar-form navbar-left"><a href="/planets/add" class="btn btn-primary">Add planet </a></div>
-
-				    <form class="navbar-form navbar-right" role="form" action="/users/logout">
-				        <button class="btn btn-success">Выйти</button>
-				    </form>
-
-				    <ul class="nav navbar-nav navbar-right">
-				        <li><a href="#"><strong>{{ Auth::user()->username }}</strong></a></li>
-				    </ul>
-		@endif
+$('#mainTabs a').click(function (e) {
+	var url
+	  e.preventDefault();
+	  $(this).tab('show');
 
 
+	var target = $("#mainn_contt");
+
+	switch( this.id ){
+		case 'goods_list':
+			url	= e.target + 'goods/listcontent';
+			break;
 
 
-                </div><!--/.navbar-collapse -->
-                	<a class="" href="/">C-Nina</a>
+		default:
+			url	= e.target;
+// 			url	= e.target + 'indexcontent';
 
-					<div class="jumbotron">
-					    <div class="container">
+	}
+// alert(url);
+	target.load( url );
 
+//	window.location.href	= url;
 
-					        <h1>Контейнер 764</h1>
+// alert(url);
+// 	  for(var name in e ) {
 
-					    </div>
-					</div>
-
-
-
-
-            </div>
-        </div>
+// 		    var value = e[name];
 
 
-<?php */ ?>
+// 			if( name== 'target'){
+// 				alert(name+' ## '+value);
+// 			}
+
+// // 			if( name== 'view'){
+// // 				for(var nname in value ) {
+// // 					var nvalue = value[nname];
+
+// // 					alert(nname+' ## '+nvalue);
+// // 				}
+// // 			}
 
 
+// // 		    alert(name+' ## '+value);
+// 		}
+});
+
+</script>
 
 
 
 
-@yield('content')
+
+
 
         <div id="footer">
             <div class="container">

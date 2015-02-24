@@ -6,4 +6,9 @@ class GoodsController extends BaseController {
 		return View::make('goods/list');
 	}
 
+	public function getListcontent(){
+
+		return  View::make('goods/listcontent');
+	}
+
 }
