@@ -5,5 +5,5 @@
 @stop
 
 @section('content')
-@include('goods/listcontent')
+<div>Goods content 2</div>
 @stop

@@ -3,12 +3,7 @@
 class GoodsController extends BaseController {
 
 	public function getList(){
-		return View::make('goods/list');
+		return View::make('goods/list', [ 'a_tab' => 'goods_list']);
 	}
 
-	public function getListcontent(){
-
-		return  View::make('goods/listcontent');
-	}
-
-}
+}//	Class end

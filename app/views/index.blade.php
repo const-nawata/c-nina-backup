@@ -5,5 +5,5 @@ Home
 @stop
 
 @section('content')
-@include('index_content')
+<div>Index content</div>
 @stop

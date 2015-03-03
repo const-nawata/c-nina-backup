@@ -39,90 +39,49 @@
 	</div>
 </div>
 
-
-
 <nav class="navbar navbar-default navbar-fixed-left">
 	<div class="container tabs-container">
 
 		<ul id="mainTabs" class="nav nav-tabs">
-		  <li role="presentation" class="active"><a id="home" href="" role="tab">Главная</a></li>
-		  <li role="presentation"><a id="goods_list" href="" role="tab">Товары</a></li>
-		  <li role="presentation"><a id="users_list" href="" role="tab">Пользователи</a></li>
+		  <li role="presentation" id="index_li" class="active"><a href="/" role="tab">Главная</a></li>
+		  <li role="presentation" id="goods_list_li"><a href="/goods/list" role="tab">Товары</a></li>
+		  <li role="presentation" id="users_list_li"><a href="/" role="tab">Пользователи</a></li>
 		</ul>
 
 	</div>
 </nav>
 
-
-
 <div id="mainn_contt">
 @yield('content')
 </div>
 
+<div id="footer">
+	<div class="container">
+		<div class="col-md-4">&copy; 2015 C-Nina</div>
+	</div>
+</div>
+
+</body>
+
 <script>
+$( document ).ready(function(){
+	var a_tab	= '<?php echo $a_tab; ?>';
 
-$('#mainTabs a').click(function (e) {
-	var url
-	  e.preventDefault();
-	  $(this).tab('show');
+	$('#mainTabs li').removeClass('active');
 
-
-	var target = $("#mainn_contt");
-
-	switch( this.id ){
+	switch( a_tab ){
 		case 'goods_list':
-			url	= e.target + 'goods/listcontent';
+			$("#goods_list_li").addClass('active');
 			break;
 
-
 		default:
-			url	= e.target;
-// 			url	= e.target + 'indexcontent';
-
+		case 'index':
+			$("#index_li").addClass('active');
+			break;
 	}
-// alert(url);
-	target.load( url );
 
-//	window.location.href	= url;
-
-// alert(url);
-// 	  for(var name in e ) {
-
-// 		    var value = e[name];
-
-
-// 			if( name== 'target'){
-// 				alert(name+' ## '+value);
-// 			}
-
-// // 			if( name== 'view'){
-// // 				for(var nname in value ) {
-// // 					var nvalue = value[nname];
-
-// // 					alert(nname+' ## '+nvalue);
-// // 				}
-// // 			}
-
-
-// // 		    alert(name+' ## '+value);
-// 		}
 });
 
 </script>
 
-
-
-
-
-
-
-        <div id="footer">
-            <div class="container">
-                <div class="col-md-4">
-                    &copy; 2015 C-Nina
-                </div>
-            </div>
-        </div>
-
-</body>
 </html>
