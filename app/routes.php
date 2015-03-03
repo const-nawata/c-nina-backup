@@ -22,3 +22,4 @@ Route::get('/', [
 ]);
 
 Route::controller('goods', 'GoodsController');
+Route::controller('users', 'UsersController');

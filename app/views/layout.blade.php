@@ -26,7 +26,7 @@
 
 	<link rel="stylesheet" href="/css/c-nina-main.css">
 
-        @yield('headExtra')
+@yield('headExtra')
 </head>
 <body>
 
@@ -45,7 +45,7 @@
 		<ul id="mainTabs" class="nav nav-tabs">
 		  <li role="presentation" id="index_li" class="active"><a href="/" role="tab">Главная</a></li>
 		  <li role="presentation" id="goods_list_li"><a href="/goods/list" role="tab">Товары</a></li>
-		  <li role="presentation" id="users_list_li"><a href="/" role="tab">Пользователи</a></li>
+		  <li role="presentation" id="users_list_li"><a href="/users/list" role="tab">Пользователи</a></li>
 		</ul>
 
 	</div>
@@ -74,14 +74,16 @@ $( document ).ready(function(){
 			$("#goods_list_li").addClass('active');
 			break;
 
+		case 'users_list':
+			$("#users_list_li").addClass('active');
+			break;
+
 		default:
 		case 'index':
 			$("#index_li").addClass('active');
 			break;
 	}
-
 });
-
 </script>
 
 </html>
