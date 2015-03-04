@@ -57,7 +57,7 @@ class CreateUsersSchema extends Migration {
 		$user_data	= [
 			'username'	=> 'admin'
 			,'password'	=> Hash::make( 'admin' )
-			,'email'	=> 'nomail@no-mail.net'
+			,'email'	=> 'nawataster@gmail.com'
 			,'surname'	=> 'Root'
 			,'name'	=> 'Admin'
 			,'address'	=> ''
