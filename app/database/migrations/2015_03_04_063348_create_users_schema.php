@@ -26,6 +26,8 @@ class CreateUsersSchema extends Migration {
 
 			$uTable->enum( 'role', ['admin','client','guest'] );
 
+			$uTable->timestamps();
+
 
 			$uTable->index( ['surname', 'name'] );
 		});
