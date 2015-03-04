@@ -16,15 +16,22 @@ class CreateUsersSchema extends Migration {
 			$uTable->engine = 'InnoDB';
 			$uTable->increments( 'id' )->unsigned();
 
-			$uTable->string( 'login', 20 )->unique();
+			$uTable->string( 'username', 20 )->unique();
 			$uTable->string( 'password' );
 			$uTable->string( 'email', 100 );
 			$uTable->string( 'surname', 100 )->nullable();
-			$uTable->string( 'name', 100 );
+			$uTable->string( 'name', 100 )->nullable();
 			$uTable->text( 'address' )->nullable();
 			$uTable->string( 'phone', 20 )->nullable();
 
+
 			$uTable->enum( 'role', ['admin','client','guest'] );
+
+			$uTable->boolean('isActive')->default(FALSE);
+			$uTable->string('activationCode');
+
+			//	Tokent for possibility to remember use
+			$uTable->rememberToken();
 
 			$uTable->timestamps();
 
@@ -32,9 +39,7 @@ class CreateUsersSchema extends Migration {
 			$uTable->index( ['surname', 'name'] );
 		});
 
-
-//TODO: Create admin record. Don't forget to generate password.
-
+		$this->createRootAdmin();
 	}
 //______________________________________________________________________________
 
@@ -45,6 +50,28 @@ class CreateUsersSchema extends Migration {
  */
 	public function down(){
 		Schema::drop('users');
+	}
+//______________________________________________________________________________
+
+	private function createRootAdmin(){
+		$user_data	= [
+			'username'	=> 'admin'
+			,'password'	=> Hash::make( 'admin' )
+			,'email'	=> 'nomail@no-mail.net'
+			,'surname'	=> 'Root'
+			,'name'	=> 'Admin'
+			,'address'	=> ''
+			,'phone'	=> ''
+			,'role'	=> 'admin'
+			,'isActive'	=> TRUE
+			,'activationCode'	=> ''
+		];
+
+
+	    $user = new User();
+    	$user	= $user->fill($user_data);
+	    $id = $user->save();
+
 	}
 //______________________________________________________________________________
 
