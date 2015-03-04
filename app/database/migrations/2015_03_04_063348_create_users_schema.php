@@ -25,7 +25,7 @@ class CreateUsersSchema extends Migration {
 			$uTable->string( 'phone', 20 )->nullable();
 
 
-			$uTable->enum( 'role', ['admin','client','guest'] );
+			$uTable->enum( 'role', ['admin','client','guest','seller','woker'] );
 
 			$uTable->boolean('isActive')->default(FALSE);
 			$uTable->string('activationCode');
