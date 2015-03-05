@@ -63,8 +63,8 @@ class CreateUsersSchema extends Migration {
 			,'address'	=> ''
 			,'phone'	=> ''
 			,'role'	=> 'admin'
-			,'isActive'	=> TRUE
-			,'activationCode'	=> ''
+			,'is_active'	=> TRUE
+			,'activation_code'	=> ''
 		];
 
 
