@@ -38,7 +38,10 @@
 		</div>
 	</div>
 </div>
-
+<?php
+//TODO: Change calls from goods and users controller to calls from index controller.
+//	Remove a_tab parameter from methods.
+?>
 <div class="container">
 	<div class="row">
 		<div class="col-sm-6">
@@ -74,28 +77,5 @@
 </div>
 
 </body>
-
-<script>
-$( document ).ready(function(){
-	var a_tab	= '<?php echo $a_tab; ?>';
-
-	$('#mainTabs li').removeClass('active');
-
-	switch( a_tab ){
-		case 'goods_list':
-			$("#goods_list_li").addClass('active');
-			break;
-
-		case 'users_list':
-			$("#users_list_li").addClass('active');
-			break;
-
-		default:
-		case 'index':
-			$("#index_li").addClass('active');
-			break;
-	}
-});
-</script>
 
 </html>
