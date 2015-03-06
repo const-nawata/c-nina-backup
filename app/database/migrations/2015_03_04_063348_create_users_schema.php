@@ -11,6 +11,7 @@ class CreateUsersSchema extends Migration {
  * @return void
  */
 	public function up(){
+		Schema::dropIfExists('users');
 
 		Schema::create( 'users', function( Blueprint $uTable ){
 			$uTable->engine = 'InnoDB';
@@ -28,7 +29,7 @@ class CreateUsersSchema extends Migration {
 			$uTable->enum( 'role', ['admin','client','guest','seller','woker'] );
 
 			$uTable->boolean('isActive')->default(FALSE);
-			$uTable->string('activationCode');
+			$uTable->string('activationCode')->nullable();
 
 			//	Tokent for possibility to remember use
 			$uTable->rememberToken();
@@ -49,7 +50,7 @@ class CreateUsersSchema extends Migration {
  * @return void
  */
 	public function down(){
-		Schema::drop('users');
+		Schema::dropIfExists('users');
 	}
 //______________________________________________________________________________
 
@@ -63,8 +64,8 @@ class CreateUsersSchema extends Migration {
 			,'address'	=> ''
 			,'phone'	=> ''
 			,'role'	=> 'admin'
-			,'is_active'	=> TRUE
-			,'activation_code'	=> ''
+			,'isActive'	=> TRUE
+			,'activationCode'	=> ''
 		];
 
 
