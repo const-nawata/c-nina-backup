@@ -39,17 +39,29 @@
 	</div>
 </div>
 
-<nav class="navbar navbar-default navbar-fixed-left">
-	<div class="container tabs-container">
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="btn-group btn-group-justified" aria-label="Header-buttons">
+				<div class="btn-group" role="group">
+					<a type="button" class="btn btn-default" href="/">Главная</a>
+				</div>
+				<div class="btn-group" role="group">
+					<a type="button" class="btn btn-default" href="/goods/list">О нас</a>
+				</div>
+				<div class="btn-group" role="group">
+					<a type="button" class="btn btn-default" href="/users/list">Контакты</a>
+				</div>
+			</div>
+		</div>
 
-		<ul id="mainTabs" class="nav nav-tabs">
-		  <li role="presentation" id="index_li" class="active"><a href="/" role="tab">Главная</a></li>
-		  <li role="presentation" id="goods_list_li"><a href="/goods/list" role="tab">Товары</a></li>
-		  <li role="presentation" id="users_list_li"><a href="/users/list" role="tab">Пользователи</a></li>
-		</ul>
-
+		<div class="col-sm-6">
+			<ul class="nav navbar-right">
+				<li><a href="#">Link</a></li>
+			</ul>
+		</div>
 	</div>
-</nav>
+</div>
 
 <div id="mainn_contt">
 @yield('content')

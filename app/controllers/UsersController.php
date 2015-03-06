@@ -7,4 +7,9 @@ class UsersController extends BaseController {
 	}
 //______________________________________________________________________________
 
+	public function getLogin(){
+		return View::make('users/login');
+	}
+//______________________________________________________________________________
+
 }//	Class end
