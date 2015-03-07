@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('title')
-Home
+{{ @trans('prompts.home') }}
 @stop
 
 @section('content')

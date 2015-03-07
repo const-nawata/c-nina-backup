@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('title')
-Контакты
+{{ @trans('prompts.contacts') }}
 @stop
 
 @section('content')

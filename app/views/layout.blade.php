@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>@yield('title') — C-Nina</title>
+	<title>@yield('title') — {{ @trans('prompts.brand') }}</title>
 
 	<meta content="text/html; charset=utf-8" http-equiv="content-type">
 	<meta name="keywords" content="магазин,контейтер,764,Нина,калиновский,базар,черновцы,чернівці">
@@ -44,13 +44,13 @@
 		<div class="col-sm-6">
 			<div class="btn-group btn-group-justified" aria-label="Header-buttons">
 				<div class="btn-group" role="group">
-					<a type="button" class="btn btn-default" href="/">Главная</a>
+					<a type="button" class="btn btn-default" href="/">{{ @trans('prompts.home') }}</a>
 				</div>
 				<div class="btn-group" role="group">
-					<a type="button" class="btn btn-default" href="/index/about">О нас</a>
+					<a type="button" class="btn btn-default" href="/index/about">{{ @trans('prompts.about_us') }}</a>
 				</div>
 				<div class="btn-group" role="group">
-					<a type="button" class="btn btn-default" href="/index/contacts">Контакты</a>
+					<a type="button" class="btn btn-default" href="/index/contacts">{{ @trans('prompts.contacts') }}</a>
 				</div>
 			</div>
 		</div>
@@ -58,7 +58,7 @@
 		<div class="col-sm-6">
 @if (!Auth::check())
 			<ul class="nav navbar-right">
-				<li><a href="/users/login">Войти</a></li>
+				<li><a href="/users/login">{{ @trans('prompts.login') }}</a></li>
 			</ul>
 @else
 
@@ -74,7 +74,7 @@
 
 <div id="footer">
 	<div class="container">
-		<div class="col-md-4">&copy; 2015 C-Nina</div>
+		<div class="col-md-4">&copy; 2015 {{ @trans('prompts.brand') }}</div>
 	</div>
 </div>
 

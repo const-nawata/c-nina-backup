@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('title')
-Login
+{{ @trans('prompts.login') }}
 @stop
 
 @section('headExtra')
@@ -16,21 +16,21 @@ Login
     @endif
 
     <form class="form-signin" role="form" action="{{ action('UsersController@postLogin') }}" method="post">
-		<h2 class="form-signin-heading">Your login data</h2>
+		<h2 class="form-signin-heading">{{ @trans('prompts.your_login_data') }}</h2>
 
 <?php /* ?>
         <input type="text" class="form-control" placeholder="Email or username" name="username" required autofocus />
 <?php */ ?>
 
-        <input type="text" class="form-control" placeholder="Username" name="username" required autofocus />
-        <input type="password" class="form-control" placeholder="Password" name="password" required />
+        <input type="text" class="form-control" placeholder="{{ @trans('prompts.username') }}" name="username" required autofocus />
+        <input type="password" class="form-control" placeholder="{{ @trans('prompts.password') }}" name="password" required />
         <label class="checkbox">
-            <input type="checkbox" name="remember" value="remember-me">Remember me
+            <input type="checkbox" name="remember" value="remember-me">{{ @trans('prompts.remember_me') }}
         </label>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">{{ @trans('prompts.enter') }}</button>
 
-        <a href="/password/remind">Password forgotten?</a><br />
-        <a href="/users/register">Registration</a>
+        <a href="/password/remind">{{ @trans('prompts.password_forgotten') }}</a><br />
+        <a href="/users/register">{{ @trans('prompts.registration') }}</a>
 
     </form>
 </div>

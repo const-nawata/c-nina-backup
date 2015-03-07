@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('title')
-О нас
+{{ @trans('prompts.about_us') }}
 @stop
 
 @section('content')

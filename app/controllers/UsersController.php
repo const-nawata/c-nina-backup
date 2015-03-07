@@ -22,12 +22,13 @@ class UsersController extends BaseController {
 
 	    // Try to authorise user
 	    if (Auth::attempt($creds, Input::has('remember'))) {
-	        Log::info("User [{$username}] successfully logged in.");
+	        Log::info( trans( 'messages.login_success', ['username'=>$username] ) );
 	        return Redirect::intended();
 	    }
 
-	    Log::info("User [{$username}] failed to login.");
-	    return Redirect::back()->withAlert('Wrong username or password or accaunt is not activated yet.');
+	    Log::info( trans( 'messages.login_failed', ['username'=>$username] ) );
+
+	    return Redirect::back()->withAlert( trans('messages.login_wrong') );
 	}
 //______________________________________________________________________________
 
