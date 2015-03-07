@@ -3,8 +3,9 @@
 class IndexController extends BaseController{
 
     public function getIndex(){
-    	return View::make( 'index', [ 'a_tab'  => 'intex'] );
+    	return View::make( 'index' );
     }
 //______________________________________________________________________________
+
 
 }//	Class end

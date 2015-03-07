@@ -40,7 +40,6 @@
 </div>
 <?php
 //TODO: Change calls from goods and users controller to calls from index controller.
-//	Remove a_tab parameter from methods.
 ?>
 <div class="container">
 	<div class="row">

@@ -11,15 +11,16 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+// Route::get('/', function()
+// {
+// 	return View::make('hello');
+// });
 
 Route::get('/', [
 	'as' => 'home',
 	'uses' => 'IndexController@getIndex'
 ]);
 
+Route::controller('index', 'IndexController');
 Route::controller('goods', 'GoodsController');
 Route::controller('users', 'UsersController');
