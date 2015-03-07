@@ -38,9 +38,7 @@
 		</div>
 	</div>
 </div>
-<?php
-//TODO: Change calls from goods and users controller to calls from index controller.
-?>
+
 <div class="container">
 	<div class="row">
 		<div class="col-sm-6">
@@ -58,9 +56,14 @@
 		</div>
 
 		<div class="col-sm-6">
+@if (!Auth::check())
 			<ul class="nav navbar-right">
-				<li><a href="#">Link</a></li>
+				<li><a href="/users/login">Войти</a></li>
 			</ul>
+@else
+
+@endif
+
 		</div>
 	</div>
 </div>
