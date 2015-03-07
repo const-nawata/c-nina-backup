@@ -24,6 +24,7 @@
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
+	<script src="/js/c-nina.js"></script>
 	<link rel="stylesheet" href="/css/c-nina-main.css">
 
 @yield('headExtra')
@@ -64,8 +65,8 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ @trans('prompts.lang') }}<span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">{{ @trans('prompts.english') }}</a></li>
-							<li><a href="#">{{ @trans('prompts.russian') }}</a></li>
+							<li><a onclick="changeLang('en');" href="#">{{ @trans('prompts.english') }}</a></li>
+							<li><a onclick="changeLang('ru');" href="#">{{ @trans('prompts.russian') }}</a></li>
 						</ul>
 					</li>
 				</ul>
