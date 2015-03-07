@@ -11,5 +11,8 @@ return [
 	'registration'	=> 'Registration',
 	'username'	=> 'Username',
 	'password'	=> 'Password',
-	'your_login_data'	=> 'Your login data'
+	'your_login_data'	=> 'Your login data',
+	'lang'	=> 'Lang',
+	'russian'	=> 'Russian',
+	'english'	=> 'English'
 ];

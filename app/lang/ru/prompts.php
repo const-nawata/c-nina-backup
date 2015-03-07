@@ -10,5 +10,8 @@ return [
 	'registration'	=> 'Регистрация',
 	'username'	=> 'Логин',
 	'password'	=> 'Пароль',
-	'your_login_data'	=> 'Введите Ваш логин и пароль'
+	'your_login_data'	=> 'Введите Ваш логин и пароль',
+	'lang'	=> 'Язык',
+	'russian'	=> 'Русский',
+	'english'	=> 'Английский'
 ];
