@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://c-nina',
+	'url' => 'http://c-nina.cv.ua',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -79,7 +79,7 @@ return array(
 	|
 	*/
 
-	'key' => 'YourSecretKey!!!',
+	'key' => 'mAlAchitE0$3',	//S-2
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
