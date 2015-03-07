@@ -1,9 +1,9 @@
 @extends('layout')
 
 @section('title')
-Товары
+О нас
 @stop
 
 @section('content')
-<div>Goods content 2</div>
+<div>О нас content</div>
 @stop

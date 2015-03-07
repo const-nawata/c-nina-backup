@@ -2,9 +2,9 @@
 
 class UsersController extends BaseController {
 
-	public function getList(){
-		return View::make('users/list');
-	}
+// 	public function getList(){
+// 		return View::make('users/list');
+// 	}
 //______________________________________________________________________________
 
 	public function getLogin(){

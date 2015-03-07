@@ -1,9 +1,9 @@
 @extends('layout')
 
 @section('title')
-Клиенты
+Контакты
 @stop
 
 @section('content')
-<div>Users content</div>
+<div>Контакты content</div>
 @stop

@@ -49,10 +49,10 @@
 					<a type="button" class="btn btn-default" href="/">Главная</a>
 				</div>
 				<div class="btn-group" role="group">
-					<a type="button" class="btn btn-default" href="/goods/list">О нас</a>
+					<a type="button" class="btn btn-default" href="/index/about">О нас</a>
 				</div>
 				<div class="btn-group" role="group">
-					<a type="button" class="btn btn-default" href="/users/list">Контакты</a>
+					<a type="button" class="btn btn-default" href="/index/contacts">Контакты</a>
 				</div>
 			</div>
 		</div>
