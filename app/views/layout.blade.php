@@ -1,3 +1,8 @@
+<?php
+//	No possibibly to do it in root controller (MainController)
+$path	=  Request::path();
+$path	=  $path != '/' ? "/".$path."/" : $path;
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,10 +64,6 @@
 				</div>
 			</div>
 
-
-
-
-
 			<div class="col-sm-6">
 				<ul class="nav navbar-nav navbar-right">
 @if (!Auth::check())
@@ -75,17 +76,8 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ @trans('prompts.lang') }}<span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
-
-<?php
-$path	=  Request::path();
-$path	=  $path != '/' ? "/".$path."/" : $path;
-$path	.= '?';
-?>
-
-							<li><a href="{{ @$path }}lang=en">{{ @trans('prompts.english') }}</a></li>
-							<li><a href="{{ @$path }}lang=ru">{{ @trans('prompts.russian') }}</a></li>
-
-
+							<li><a href="{{ @$path }}?lang=en">{{ @trans('prompts.english') }}</a></li>
+							<li><a href="{{ @$path }}?lang=ru">{{ @trans('prompts.russian') }}</a></li>
 						</ul>
 					</li>
 				</ul>

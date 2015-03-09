@@ -3,14 +3,21 @@
 class MainController extends BaseController {
 
 	private function setLang( $lang='en' ){
-		$uri = Request::path();
-		$lang	= isset($_GET['lang']) ? $_GET['lang'] : $lang;
+		if( isset($_GET['lang']) )
+			$lang	= $_GET['lang'];
+
+		else{
+			$sess_lang	= Session::get('lang');
+			$lang		= $sess_lang ? $sess_lang : $lang;
+		}
+
+		Session::put('lang', $lang);
 		App::setLocale( $lang );
 	}
 //______________________________________________________________________________
 
 	/**
-	 * Setup the layout used by the controller.
+	 * Setup the layout used by the controller and sets locale.
 	 *
 	 * @return void
 	 */
