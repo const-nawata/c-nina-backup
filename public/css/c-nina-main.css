@@ -23,3 +23,7 @@ body {
 .tabs-container{
 	margin-top: 6px;
 }
+
+.user-welcome{
+	font-weight: bold;
+}

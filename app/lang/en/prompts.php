@@ -15,5 +15,6 @@ return [
 	'your_login_data'	=> 'Your login data',
 	'lang'	=> 'Lang',
 	'russian'	=> 'Russian',
-	'english'	=> 'English'
+	'english'	=> 'English',
+	'welcome'	=> 'Welcome'
 ];

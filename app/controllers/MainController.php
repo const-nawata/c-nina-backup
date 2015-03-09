@@ -2,13 +2,17 @@
 
 class MainController extends BaseController {
 
-	private function setLang( $lang='en' ){
+/**
+ * sets language in application
+ * @param string $lang
+ */
+	private function setLang(){
 		if( isset($_GET['lang']) )
 			$lang	= $_GET['lang'];
 
 		else{
 			$sess_lang	= Session::get('lang');
-			$lang		= $sess_lang ? $sess_lang : $lang;
+			$lang		= $sess_lang ? $sess_lang :  App::getLocale();
 		}
 
 		Session::put('lang', $lang);
