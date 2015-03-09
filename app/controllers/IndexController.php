@@ -1,6 +1,6 @@
 <?php
 
-class IndexController extends BaseController{
+class IndexController extends MainController{
 
     public function getIndex(){
     	return View::make( 'index' );

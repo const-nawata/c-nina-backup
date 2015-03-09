@@ -3,6 +3,8 @@
  */
 
 function changeLang(lang){
-	alert('lang: '+lang);
+//	alert('lang: '+lang);
+	
+	location.reload();
 }
 //______________________________________________________________________________

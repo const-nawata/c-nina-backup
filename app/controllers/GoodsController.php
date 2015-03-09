@@ -1,6 +1,6 @@
 <?php
 
-class GoodsController extends BaseController {
+class GoodsController extends MainController {
 
 // 	public function getList(){
 // 		return View::make('goods/list');

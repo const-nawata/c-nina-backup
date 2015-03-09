@@ -2,6 +2,7 @@
 return [
 	'home'	=> 'Главная',
 	'login'	=> 'Войти',
+	'logout'	=> 'Выйти',
 	'contacts'	=> 'Контакты',
 	'about_us'	=> 'О нас',
 	'enter'	=> 'Вход',

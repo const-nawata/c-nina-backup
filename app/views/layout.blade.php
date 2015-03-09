@@ -59,14 +59,33 @@
 				</div>
 			</div>
 
+
+
+
+
 			<div class="col-sm-6">
 				<ul class="nav navbar-nav navbar-right">
+@if (!Auth::check())
 					<li><a href="/users/login">{{ @trans('prompts.login') }}</a></li>
+@else
+					<li><strong>{{ Auth::user()->username }}</strong></li>
+					<li><a href="/users/logout">{{ @trans('prompts.logout') }}</a></li>
+
+@endif
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ @trans('prompts.lang') }}<span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
-							<li><a onclick="changeLang('en');" href="#">{{ @trans('prompts.english') }}</a></li>
-							<li><a onclick="changeLang('ru');" href="#">{{ @trans('prompts.russian') }}</a></li>
+
+<?php
+$path	=  Request::path();
+$path	=  $path != '/' ? "/".$path."/" : $path;
+$path	.= '?';
+?>
+
+							<li><a href="{{ @$path }}lang=en">{{ @trans('prompts.english') }}</a></li>
+							<li><a href="{{ @$path }}lang=ru">{{ @trans('prompts.russian') }}</a></li>
+
+
 						</ul>
 					</li>
 				</ul>

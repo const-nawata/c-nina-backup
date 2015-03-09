@@ -3,6 +3,7 @@ return [
 	'brand'	=> 'C-Nina',//	Don't duplicate this key in other langs.
 	'home'	=> 'Home',
 	'login'	=> 'Login',
+	'logout'	=> 'Logout',
 	'contacts'	=> 'Contacts',
 	'about_us'	=> 'About us',
 	'enter'	=> 'Enter',

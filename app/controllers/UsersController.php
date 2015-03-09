@@ -1,6 +1,6 @@
 <?php
 
-class UsersController extends BaseController {
+class UsersController extends MainController {
 
 	public function getLogin(){
 		return View::make('users/login');
@@ -15,9 +15,6 @@ class UsersController extends BaseController {
 
 	    $username 		= Input::get('username');
 
-// 	    $ct				= strpos($username, '@') ? 'email' : 'username';
-// 	    $creds["$ct"]	= $username;
-
 	    $creds['username']	= $username;
 
 	    // Try to authorise user
@@ -29,6 +26,12 @@ class UsersController extends BaseController {
 	    Log::info( trans( 'messages.login_failed', ['username'=>$username] ) );
 
 	    return Redirect::back()->withAlert( trans('messages.login_wrong') );
+	}
+//______________________________________________________________________________
+
+	public function getLogout() {
+	    Auth::logout();
+	    return Redirect::to('/');
 	}
 //______________________________________________________________________________
 
