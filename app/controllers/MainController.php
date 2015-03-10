@@ -27,6 +27,11 @@ class MainController extends BaseController {
 	 */
 	protected function setupLayout(){
 		$this->setLang();
+
+		$lpath	=  Request::path();
+		$lpath	=  $lpath != '/' ? "/".$lpath."/" : $lpath;
+		View::share('lpath', $lpath);
+
 		parent::setupLayout();
 	}
 //______________________________________________________________________________

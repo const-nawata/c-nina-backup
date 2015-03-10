@@ -1,8 +1,3 @@
-<?php
-//	No possibibly to do it in root controller (MainController)
-$path	=  Request::path();
-$path	=  $path != '/' ? "/".$path."/" : $path;
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,7 +43,6 @@ $path	=  $path != '/' ? "/".$path."/" : $path;
 	</div>
 </div>
 
-
 <nav class="navbar navbar-default">
 	<div class="container">
 		<div class="row">
@@ -77,8 +71,8 @@ $path	=  $path != '/' ? "/".$path."/" : $path;
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ @trans('prompts.lang') }}<span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="{{ @$path }}?lang=en">{{ @trans('prompts.english') }}</a></li>
-							<li><a href="{{ @$path }}?lang=ru">{{ @trans('prompts.russian') }}</a></li>
+							<li><a href="{{ @$lpath }}?lang=en">{{ @trans('prompts.english') }}</a></li>
+							<li><a href="{{ @$lpath }}?lang=ru">{{ @trans('prompts.russian') }}</a></li>
 						</ul>
 					</li>
 				</ul>

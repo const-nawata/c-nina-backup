@@ -16,5 +16,6 @@ return [
 	'lang'	=> 'Lang',
 	'russian'	=> 'Russian',
 	'english'	=> 'English',
-	'welcome'	=> 'Welcome'
+	'welcome'	=> 'Welcome',
+	'dashboard'	=> 'Dashboard'
 ];
