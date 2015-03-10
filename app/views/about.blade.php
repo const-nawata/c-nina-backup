@@ -1,9 +1,13 @@
-@extends('layouts.main')
+@extends('layouts.left')
 
 @section('title')
 {{ @trans('prompts.about_us') }}
 @stop
 
+@section('sidebar')
+<div>left side bar</div>
+@stop
+
 @section('content')
-<div>О нас content</div>
+<div>About content</div>
 @stop

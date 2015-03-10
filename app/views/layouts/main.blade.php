@@ -1,3 +1,8 @@
+<?php
+/**
+ * Main layout
+ */
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -82,8 +87,8 @@
 	</div>
 </nav>
 
-<div id="main_content">
-@yield('content')
+<div id="main_container" class="container">
+@yield('main_container')
 </div>
 
 <div id="footer">

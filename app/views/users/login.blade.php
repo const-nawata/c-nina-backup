@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.left_a')
 
 @section('title')
 {{ @trans('prompts.login') }}
@@ -9,7 +9,6 @@
 @stop
 
 @section('content')
-<div class="container">
 
 	@if (Session::has('alert'))
 	<div class="alert alert-danger"><p>{{ Session::get('alert') }}</p></div>
@@ -29,5 +28,5 @@
         <a href="/users/register">{{ @trans('prompts.registration') }}</a>
 
     </form>
-</div>
+
 @stop
