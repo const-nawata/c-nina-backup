@@ -63,12 +63,19 @@
 					<div class="btn-group" role="group">
 						<a type="button" class="btn btn-default" href="/index/contacts">{{ @trans('prompts.contacts') }}</a>
 					</div>
+
+@if( Auth::check() && Auth::user()->role == 'admin' )
+					<div class="btn-group" role="group">
+						<a type="button" class="btn btn-default" href="/index/dashboard">{{ @trans('prompts.dashboard') }}</a>
+					</div>
+@endif
+
 				</div>
 			</div>
 
 			<div class="col-sm-6">
 				<ul class="nav navbar-nav navbar-right">
-@if (!Auth::check())
+@if( !Auth::check() )
 					<li><a href="/users/login">{{ @trans('prompts.login') }}</a></li>
 @else
 					<li><a href="/users/logout">{{ @trans('prompts.logout') }}</a></li>

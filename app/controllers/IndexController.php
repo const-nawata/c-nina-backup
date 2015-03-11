@@ -17,5 +17,9 @@ class IndexController extends MainController{
     }
 //______________________________________________________________________________
 
+    public function getDashboard(){
+    	return View::make( 'dashboard' );
+    }
+//______________________________________________________________________________
 
 }//	Class end
